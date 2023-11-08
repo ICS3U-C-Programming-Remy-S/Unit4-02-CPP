@@ -28,13 +28,20 @@ int main() {
         // Convert userNumStr to int
         int userNumInt = std::stoi(userNumStr);
 
+        // Convert userNumStr to float
+        float userNumFloat = std::stof(userNumStr);
+
         // check if user number is negative
-        if (userNumInt < 0) {
+        if (userNumInt != userNumFloat) {
+            // display that user number is not positive
+            std::cout << userNumFloat << " is not a positive int."
+                      << std::endl;
+        } else if (userNumInt < 0) {
             // display that user number is not positive
             std::cout << userNumInt << " is not a positive int."
                       << std::endl;
         } else {
-             do {
+            do {
                 // calculate factorial
                 factorial = factorial * counter;
 
